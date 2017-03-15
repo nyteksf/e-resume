@@ -648,9 +648,11 @@ MODAL CODE END HERE
 	
 	<!--Alertify.js Modal -->
 	<script>
-    	"use strict";
-        alertify.set({
-            labels: {
+          "use strict";
+    	  $('document').ready(function () {
+   
+  			alertify.set({
+        		labels: {
                 ok: "Follow",
                 cancel: "Close"
             }
@@ -670,11 +672,12 @@ MODAL CODE END HERE
                 } else {
                     alertify.error("Please follow 'nytekSF' on twitter for the latest updates in JavaScript programming and web development. <strong>[" + alertify.labels.cancel + "]</strong>");
                 }
-        });
+        		}
+        );
 
-    }
+});
 
-    /* Hack to ensure button doesn't lose the pop-through graphic */
+/* Hack to ensure button doesn't lose the pop-through graphic */
     let lastFocusedEl;
 
     $('body').mouseover(function(e) {
@@ -682,15 +685,16 @@ MODAL CODE END HERE
         e.stopPropagation();
 
         //FUNC FIRES ON CLICK:
-        if (lastFocusedEl) { //IF ELEMENT HAS DEFOCUSED, DO THIS: 
-            lastFocusedEl.focus(); //Returning Focus to el
+        if (lastFocusedEl) { //If Element has defocused, do this: 
+            lastFocusedEl.focus(); //Return Focus to El
         }
         return false;
     });
 
     $(".alertify-button-ok").blur(function() { //Detects element defocusing
       lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
-    });
+    }); //Mouse moving resets focus
+   
 		
 	</script>
 
