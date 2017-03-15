@@ -22,49 +22,56 @@
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf);
 }
+        
 @font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf);
 }
+        
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf);
 }
+        
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf);
 }
+        
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf);
 }
+        
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf);
 }
+        
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf);
 }
+        
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf);
 }
 
 body {
@@ -73,11 +80,13 @@ body {
   background: #f8f8f8;
   margin: 50px 0 100px;
   letter-spacing: .3px;
-  color: #39424B; }
+  color: #39424B; 
+}
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  margin: 0; }
+  margin: 0; 
+}
 
 h1 {
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
@@ -143,7 +152,7 @@ em {
 
 ul {
   margin: 10px 0 0;
-  -webkit-padding-start: 25px; }
+} /* WAS webkit-padding-start: 25px;*/
   ul li {
     padding-left: 10px; }
   ul.minimal {
@@ -229,61 +238,97 @@ ul {
 
 @media print {
   body {
-    margin: 0; }
+    margin: 0; 
+  }
+  
   .page {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 36px 0 30px;
-    box-shadow: none; }
-    .page .resume-header,
-    .page .resume-content {
-      padding: 0 22px 0 34px; }
+    box-shadow: none; 
+  }
+    
+  .page,
+  .resume-header {
+    padding: 0 22px 0 34px; 
+  }
+    
   .container {
-    page-break-inside: avoid; }
-  .work-container .item {
-    page-break-inside: avoid; }
+    page-break-inside: avoid; 
+  }
+    
+  .work-container,
+  .item {
+    page-break-inside: avoid; 
+  }
+    
   .fa-external-link {
-    display: none; } }
+    display: none; 
+   }
+}
 
 /* Components */
 .info-tag-container {
-  margin-bottom: 5px; }
-  .info-tag-container .fa {
-    font-size: 14px;
-    width: 12px;
-    margin-right: 5px;
-    text-align: center;
-    vertical-align: middle; }
-    .info-tag-container .fa.fa-map-marker {
-      font-size: 16px; }
-    .info-tag-container .fa.fa-mobile {
-      font-size: 18px; }
-    .info-tag-container .fa.fa-envelope-o {
-      font-size: 12px; }
-    .info-tag-container .fa.fa-desktop {
-      font-size: 11px; }
-    .info-tag-container .fa.fa-external-link {
-      width: auto;
-      font-size: inherit;
-      vertical-align: text-top; }
-  .info-tag-container .info-text {
+  margin-bottom: 5px; 
+}
+
+.info-tag-container, 
+.fa {
+  font-size: 14px;
+  width: 12px;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle; 
+}
+   
+.info-tag-container,
+.fa, .fa-map-marker {
+  font-size: 16px;
+}
+
+.info-tag-container,
+.fa, .fa-mobile {
+  font-size: 18px; 
+}
+
+.info-tag-container,
+.fa, .fa-envelope-o {
+  font-size: 12px;
+}
+
+.info-tag-container,
+.fa, .fa-desktop {
+  font-size: 11px; 
+}
+  
+.info-tag-container, 
+.fa, .fa-external-link {
+  width: auto;
+  font-size: inherit;
+  vertical-align: text-top; 
+  }
+        
+  .info-tag-container, 
+  .info-text {
     font-size: 9px;
     display: inline-block;
     vertical-align: middle;
-    width: 139px; }
+    width: 139px; 
+  }
 
-.references-container .fa {
-  font-size: 14px; }
+.references-container, 
+.fa {
+  font-size: 14px; 
+}
 	
 .email-link {
-    cursor: pointer;
+    cursor: text;
 }
 
 /*
 * MODAL CODE BEGIN HERE 
 **/
-
 
 .alertify,
 .alertify-show,
@@ -643,7 +688,7 @@ button:focus {
 	<!--Alertify.js Modal -->
 	<script>
         "use strict";
-    	$('.email-link').mouseover(function () {
+    	$('#email-link').hover(function () {
   	    alertify.set({
                 labels: {
                     ok: "Follow",
@@ -720,7 +765,7 @@ button:focus {
 					        <div class="info-tag-container">
 					            <i class="fa fa-envelope-o"></i>
 					        
-					                <h6 class="info-text email-link">[email protected]<i class="fa fa-external-link" aria-hidden="true"></i></h6>
+					                <h6 class="info-text"><span id="email-link">[email protected]<i class="fa fa-external-link" aria-hidden="true"></i></span></h6>
 					        </div>
 					        <div class="info-tag-container">
 					            <i class="fa fa-mobile"></i>
