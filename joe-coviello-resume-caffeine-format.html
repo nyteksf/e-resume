@@ -1,0 +1,588 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<title>Joe Coviello</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: #f8f8f8;
+  margin: 50px 0 100px;
+  letter-spacing: .3px;
+  color: #39424B; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin: 0; }
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px; }
+
+h2 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .5px; }
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: .4px; }
+  h3.bold {
+    font-weight: 700; }
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12px; }
+  h4.bold {
+    font-weight: 700; }
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px; }
+  h5.italic {
+    font-style: italic; }
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px; }
+
+a {
+  color: inherit;
+  text-decoration: inherit; }
+  a:hover {
+    color: #2895F1; }
+  a .fa-external-link {
+    font-size: 10px;
+    vertical-align: text-top; }
+
+p,
+li {
+  font-size: 11px; }
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px; }
+
+em {
+  color: #999; }
+
+ul {
+  margin: 10px 0 0;
+  -webkit-padding-start: 25px; }
+  ul li {
+    padding-left: 10px; }
+  ul.minimal {
+    list-style: none;
+    padding: 0; }
+    ul.minimal li {
+      margin-bottom: 3px;
+      padding-left: 0; }
+  ul.two-column {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 28px;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 28px;
+         column-gap: 28px; }
+    ul.two-column li {
+      padding-left: 0; }
+
+@page {
+  size: A4; }
+
+.container {
+  padding-top: 20px; }
+
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #56817A; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.profile-pic {
+  display: none;
+  margin-top: -5px;
+  margin-right: 18px; }
+  .profile-pic img {
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    border: 2px solid #56817A; }
+
+.summary {
+  margin: 5px 0 5px; }
+
+/* Layouts */
+.page {
+  background: white;
+  width: 612px;
+  min-height: 792px;
+  display: block;
+  margin: 0 auto;
+  border-top: 10px solid #56817A;
+  padding: 36px 22px 30px 34px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+  .page:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.left-column {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+  word-wrap: break-word; }
+
+.right-column {
+  width: auto;
+  overflow: hidden; }
+
+.item {
+  margin-bottom: 15px; }
+  .item:last-child {
+    margin-bottom: 0; }
+
+@media print {
+  body {
+    margin: 0; }
+  .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none; }
+    .page .resume-header,
+    .page .resume-content {
+      padding: 0 22px 0 34px; }
+  .container {
+    page-break-inside: avoid; }
+  .work-container .item {
+    page-break-inside: avoid; }
+  .fa-external-link {
+    display: none; } }
+
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px; }
+  .info-tag-container .fa {
+    font-size: 14px;
+    width: 12px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle; }
+    .info-tag-container .fa.fa-map-marker {
+      font-size: 16px; }
+    .info-tag-container .fa.fa-mobile {
+      font-size: 18px; }
+    .info-tag-container .fa.fa-envelope-o {
+      font-size: 12px; }
+    .info-tag-container .fa.fa-desktop {
+      font-size: 11px; }
+    .info-tag-container .fa.fa-external-link {
+      width: auto;
+      font-size: inherit;
+      vertical-align: text-top; }
+  .info-tag-container .info-text {
+    font-size: 9px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 139px; }
+
+.references-container .fa {
+  font-size: 14px; }
+
+	</style>
+	</head>
+	<body>
+		<main id="resume" class="page">
+			<header class="resume-header clearfix">
+			    <div class="profile-header pull-left">
+			        <h1>Joe Coviello</h1>
+			        <h2>Jr. Web Dev</h2>
+			    </div>
+			    <div class="profile-pic pull-right">
+			        <img src="" alt="profile-pic">
+			    </div>
+			</header>
+			<div class="resume-content">
+				<aside class="left-column">
+					<div class="container about-container">
+					    <div class="title">
+					        <h3>About</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-map-marker"></i>
+					        
+					                <h6 class="info-text">550 Central Ave., #213<br/>Alameda CA 94501</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-envelope-o"></i>
+					        
+					                <h6 class="info-text">email.nytek@gmail.com</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-mobile"></i>
+					        
+					                <h6 class="info-text">(415) 413-3093</h6>
+					        </div>
+					
+					                         <div class="info-tag-container">
+					                             <i class="fa fa-twitter"></i>
+					                         
+					                                 <h6 class="info-text">
+					                                     <a href="http://www.twitter.com/nyteksf/" target="_blank">
+					                                         nyteksf <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>                         <div class="info-tag-container">
+					                             <i class="fa fa-github"></i>
+					                         
+					                                 <h6 class="info-text">
+					                                     <a href="http://www.github.com/nyteksf/" target="_blank">
+					                                         nyteksf <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>                         <div class="info-tag-container">
+					                             <i class="fa fa-jsfiddle"></i>
+					                         
+					                                 <h6 class="info-text">
+					                                     <a href="https://jsfiddle.net/user/nytek/fiddles/" target="_blank">
+					                                         nytek <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div></section>
+					    <div class="skills-container">
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Front-End</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <h4 class="bold">Intermediate</h4>
+					                    <ul class="minimal">
+					                            <li><h6>HTML5</h6></li>
+					                            <li><h6>CSS3</h6></li>
+					                            <li><h6>JavaScript</h6></li>
+					                            <li><h6>jQuery</h6></li>
+					                            <li><h6>Bootstrap 3</h6></li>
+					                            <li><h6>Underscore.js</h6></li>
+					                            <li><h6>Font Awesome</h6></li>
+					                            <li><h6>Mocha + Chai</h6></li>
+					                            <li><h6>WordPress</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Mid-End</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <h4 class="bold">Beginner</h4>
+					                    <ul class="minimal">
+					                            <li><h6>Basic PHP</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Back-End</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <h4 class="bold">Intermediate</h4>
+					                    <ul class="minimal">
+					                            <li><h6>MySQL Certification</h6></li>
+					                            <li><h6>NoSQL</h6></li>
+					                            <li><h6>Basic Node.js</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>SysAdmin</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <h4 class="bold">Intermediate</h4>
+					                    <ul class="minimal">
+					                            <li><h6>Linux &amp; InfoSec</h6></li>
+					                            <li><h6>A.W.S. Cloud Certifications</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					            </section>
+					    </div>
+					    <div class="container interests-container">
+					        <div class="title">
+					            <h3>Interests</h3>
+					            <div class="keyline"></div>
+					        </div>
+					            <section class="item">
+					                    <h4 class="bold">Psychology</h4>
+					                    <ul class="minimal">
+					                            <li>Classic works</li>
+					                            <li>NLP/Contemporaries</li>
+					                    </ul>
+					            </section>
+					            <section class="item">
+					                    <h4 class="bold">Cars &amp; Racing</h4>
+					                    <ul class="minimal">
+					                            <li>Muscle &amp; Import tuners</li>
+					                            <li>Twisties &amp; drag racing</li>
+					                            <li>Advanced driving techniques</li>
+					                    </ul>
+					            </section>
+					    </div>
+				</aside>
+				<div class="right-column">
+					        <div class="container summary-container">
+					            <div class="title">
+					                <h3>Summary</h3>
+					                <div class="keyline"></div>
+					            </div>            <p class="summary">
+					                Joe hails from New York State. Ever since having played gorillas.bas there in 5th Grade After School years ago, and trying to reverse engineer our own QBasic program:- the desire to become a programmer was realized. Later in the 90s free hosting websites like geocities and angelfire were his playgrounds. Three years or so into also realizing it's not too late to pursue a dream as a career: the chance to learn the trade from senior developers, and prove himself is the next step in a much awaited journey.
+					            </p>
+					        </div>
+					<div class="container work-container">
+					    <div class="title">
+					        <h3>Experience</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        <a href="http://www.hackercodeacademy.com" target="_blank">
+					                            Hacker: Code Academy <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">11/2014</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					            <h4>Web Master, Marketing Lead</h4>
+					
+					            <p class="summary">Hacker: Code Academy is a WordPress project for Hacker: Ventures, LLC.</p>
+					
+					            <ul>
+					                <li>Selected &amp; customized WordPress theme and plugins</li>
+					                <li>Created marketing copy &amp; used marketing tools</li>
+					                <li>Market research &amp; target demographic strategy</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Bay Wizard Repairs
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">02/2017</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					            <h4>Computer Repairman (Self-Employed)</h4>
+					
+					            <p class="summary">Repairs, upgrades, home &amp; small biz. networking</p>
+					
+					            <ul>
+					                <li>Handling Windows/*nix/OS X desktop &amp; laptop computers</li>
+					                <li>Owning all marketing efforts</li>
+					                <li>With Graphic Design included (i.e., w/ Photoshop CS6):     	e.g.: http://tinypic.com/view.php?pic&#x3D;sdyyh2&amp;s&#x3D;9 (front)</li>
+					            </ul>
+					        </section>
+					</div>
+					<div class="container volunteer-container">
+					    <div class="title">
+					        <h3>Volunteer</h3>
+					        <div class="keyline"></div>
+					    </div>
+					    <section class="item">
+					        <div class="section-header clearfix">
+					            <h3 class="bold pull-left">
+					                    <a href="https://www.github.com/adobe/brackets/" target="_blank">
+					                        Adobe Brackets <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					            </h3>
+					            <h5 class="italic pull-right">
+					                    <span class="startDate">03/2017</span>
+					                    <span class="endDate"> - Present</span>
+					            </h5>
+					        </div>        <h5>Contributor</h5>
+					
+					        <p class="summary">Open source code editor project</p>
+					
+					        <ul>
+					            <li>Restriction of input allowing only properly formatted fonts through programmatic disabling of &quot;Done&quot; button</li>
+					            <li>Patched 0x format color compatibility into Color Editor</li>
+					        </ul>
+					    </section>
+					</div>
+					<div class="container education-container">
+					    <div class="title">
+					        <h3>Education</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Hack Reactor: Fulcrum
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">08/2016</span>
+					                        <span class="endDate"> - 11/2016</span>
+					                </h5>
+					            </div>
+					            <h4>JavaScript Course - Remote</h4>
+					
+					
+					            <ul class="two-column">
+					                <li>Agile/Scrum</li>
+					                <li>Dynamic DOM Manipulation, NoSQL</li>
+					                <li>Style Guides</li>
+					                <li>Other industry related skills</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Hacker: Code Academy
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">09/2014</span>
+					                        <span class="endDate"> - 12/2014</span>
+					                </h5>
+					            </div>
+					            <h4>JavaScript Bootcamp - SF, CA</h4>
+					
+					
+					            <ul class="two-column">
+					                <li>Full-Stack JavaScript-centric OOP principles &amp; techniques</li>
+					                <li>Algorithmic Complexity &amp; Big 0 Notation</li>
+					                <li>Problem Analysis &amp; Work Flow</li>
+					                <li> Basic Comp. Sci. &amp; History</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Westchester Business Institute
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">09/2003</span>
+					                        <span class="endDate"> - 12/2005</span>
+					                </h5>
+					            </div>
+					            <h4>Business Admin./Mkt./Mgmt. - White Plains, NY</h4>
+					
+					
+					            <ul class="two-column">
+					                <li>Associate degree obtained</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Mercy College
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">01/2003</span>
+					                        <span class="endDate"> - 05/2003</span>
+					                </h5>
+					            </div>
+					            <h4>Business Major - Dobbs Ferry, NY</h4>
+					
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Dobbs Ferry H.S.
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">09/2008</span>
+					                        <span class="endDate"> - 06/2002</span>
+					                </h5>
+					            </div>
+					            <h4>Dobbs Ferry, NY</h4>
+					
+					
+					            <ul class="two-column">
+					                <li>Circuitry elective taken</li>
+					                <li>Diploma obtained</li>
+					            </ul>
+					        </section>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
