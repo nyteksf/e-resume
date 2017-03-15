@@ -652,7 +652,6 @@ button:focus {
                     cancel: "Close"
                 }
             });
-	alert("ASDADASD");
   
         alertify.confirm("email.nytek@gmail.com",
               	  function (e) {
@@ -670,7 +669,7 @@ button:focus {
        /* Hack to ensure button doesn't lose the pop-through graphic on defocus */
        let lastFocusedEl;
 
-        $('body .modal').mouseover(function(e) {
+        $('body').mouseover(function(e) {
             e.preventDefault();
             e.stopPropagation();
 
@@ -717,7 +716,7 @@ button:focus {
 					        <div class="info-tag-container">
 					            <i class="fa fa-map-marker"></i>
 					        
-					                <h6 class="info-text">550 Central Ave., #213<br/>Alameda CA 94501</h6>
+					                <h6 class="info-text">550 Central Ave., #213<br/>Alameda, CA 94501</h6>
 					        </div>
 					        <div class="info-tag-container">
 					            <i class="fa fa-envelope-o"></i>
@@ -1009,5 +1008,10 @@ button:focus {
 				</div>
 			</div>
 		</main>
+        <script>
+            $("#email-link").hover(function () {
+                alert("WOOHOO);
+            });
+        </script>
 	</body>
 </html>
