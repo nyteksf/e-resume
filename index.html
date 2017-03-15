@@ -280,9 +280,9 @@ ul {
     cursor: pointer;
 }
 
-		/*
-MODAL CODE BEGIN HERE 
-*/
+/*
+* MODAL CODE BEGIN HERE 
+**/
 
 
 .alertify,
@@ -486,16 +486,14 @@ MODAL CODE BEGIN HERE
 }
 
 .alertify-inner {
-  text-align: left;
+  //text-align: left;
 }
 
 .alertify-message {
   padding: 15px;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  //font-size: .865em;
   font-size: .838em;
-  //line-height: 1.45em;
   color: Black;
 }
 
@@ -594,10 +592,8 @@ MODAL CODE BEGIN HERE
   height: 33px;
   width: 85px;
   position: relative;
-  //top: 2px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
   background: url(http://oi65.tinypic.com/2dtrkae.jpg), rgb(6, 84, 160);
-  //background-color: #04C;
   border: 1px solid rgb(6, 84, 160);
   border-color: rgb(6, 84, 160) rgb(6, 84, 160) #002A80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -607,8 +603,7 @@ MODAL CODE BEGIN HERE
 .alertify-button-ok:hover,
 .alertify-button-ok:focus,
 .alertify-button-ok:active {
-  //OG: background: #04C;
-  height: 33px;
+  height: 33px; /*MAY NEED TO DISABLE*/
   width: 85px;
   background: url(http://oi65.tinypic.com/2dtrkae.jpg), rgb(6, 84, 160);
   background-repeat: no-repeat;
@@ -641,61 +636,59 @@ MODAL CODE BEGIN HERE
 .hideMe {
   display: none;
 }
+		
 /*
-MODAL CODE END HERE 
-*/
+* MODAL CODE END HERE 
+**/
 	</style>
 	
 	<!--Alertify.js Modal -->
 	<script>
-          "use strict";
-    	  $('document').ready(function () {
-   
-  			alertify.set({
-        		labels: {
-                ok: "Follow",
-                cancel: "Close"
+        "use strict";
+    	$('document').ready(function () {
+  		      alertify.set({
+                  labels: {
+                      ok: "Follow",
+                      cancel: "Close"
+                  }
+              });
+        	  /*
+        	  alertify.set({
+            	      buttonReverse: true
+        	  });
+        	  */
+
+        	  alertify.confirm("email.nytek@gmail.com",
+              	  function (e) {
+                      if (e) {
+                          $('#trigger').click();
+                          alertify.success("Thank you! Expect to be followed back shortly. <strong>[" + alertify.labels.ok + "]</strong>");
+                      } else {
+                          alertify.error("Thank you. Your consideration is appreciated. <strong>[" + alertify.labels.cancel + "]</strong>");
+                      }
+        	      }
+              );
+
+       });
+
+       /* Hack to ensure button doesn't lose the pop-through graphic */
+       let lastFocusedEl;
+
+        $('body').mouseover(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            //FUNC FIRES ON CLICK:
+            if (lastFocusedEl) { //If Element has defocused, do this: 
+                lastFocusedEl.focus(); //Return Focus to El
             }
+            return false;
         });
-        
-        /*
-        alertify.set({
-            buttonReverse: true
-        });
-        */
 
-        alertify.confirm("email.nytek@gmail.com",
-            function (e) {
-                if (e) {
-                    $('#trigger').click();
-                    alertify.success("Thank you! Expect to be followed back shortly. <strong>[" + alertify.labels.ok + "]</strong>");
-                } else {
-                    alertify.error("Please follow 'nytekSF' on twitter for the latest updates in JavaScript programming and web development. <strong>[" + alertify.labels.cancel + "]</strong>");
-                }
-        		}
-        );
+        $(".alertify-button-ok").blur(function() { //Detects element defocusing
+          lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
+        }); //Mouse moving resets focus
 
-});
-
-/* Hack to ensure button doesn't lose the pop-through graphic */
-    let lastFocusedEl;
-
-    $('body').mouseover(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        //FUNC FIRES ON CLICK:
-        if (lastFocusedEl) { //If Element has defocused, do this: 
-            lastFocusedEl.focus(); //Return Focus to El
-        }
-        return false;
-    });
-
-    $(".alertify-button-ok").blur(function() { //Detects element defocusing
-      lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
-    }); //Mouse moving resets focus
-   
-		
 	</script>
 
 	<!-- MODAL CODE BEGINS HERE -->
