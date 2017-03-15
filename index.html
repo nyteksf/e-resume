@@ -991,8 +991,10 @@ button:focus {
 			</div>
 		</main>
         <script>
-            $("#email-link").hover(function () {
-                launchModal();
+            $("#email-link").hover(function (e) {
+                e.stopPropagation();
+		e.preventDefault();
+		launchModal();
             });
 		
 		    /* Hack to ensure button doesn't lose the pop-through graphic on defocus */
