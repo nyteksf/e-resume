@@ -649,13 +649,14 @@ MODAL CODE END HERE
 	<!--Alertify.js Modal -->
 	<script>
     function revealEmail() {
+ 				"use strict";
         alertify.set({
             labels: {
                 ok: "Follow",
                 cancel: "Close"
             }
         });
-
+        
         /*
         alertify.set({
             buttonReverse: true
@@ -663,7 +664,7 @@ MODAL CODE END HERE
         */
 
         alertify.confirm("email.nytek@gmail.com",
-            function(e) {
+            function (e) {
                 if (e) {
                     $('#trigger').click();
                     alertify.success("Thank you! Expect to be followed back shortly. <strong>[" + alertify.labels.ok + "]</strong>");
@@ -678,6 +679,7 @@ MODAL CODE END HERE
     let lastFocusedEl;
 
     $('body').mouseover(function(e) {
+				"use strict";
         e.preventDefault();
         e.stopPropagation();
 
