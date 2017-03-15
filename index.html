@@ -632,9 +632,10 @@ ul {
 }
 
 /*FIREFOX*/
-a, button, a:focus, button:focus,
+a::-moz-focus-inner, button::-moz-focus-inner,
+a:focus, button:focus,
 a:-moz-focusring, button:-moz-focusring { 
-    outline: none !important; 
+    outline: 0; 
 }        
         
 /*
