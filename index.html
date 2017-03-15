@@ -648,7 +648,7 @@ MODAL CODE END HERE
 	
 	<!--Alertify.js Modal -->
 	<script>
-    function revealEmail() {
+    	"use strict";
         alertify.set({
             labels: {
                 ok: "Follow",
@@ -678,7 +678,6 @@ MODAL CODE END HERE
     let lastFocusedEl;
 
     $('body').mouseover(function(e) {
-				"use strict";
         e.preventDefault();
         e.stopPropagation();
 
@@ -692,8 +691,7 @@ MODAL CODE END HERE
     $(".alertify-button-ok").blur(function() { //Detects element defocusing
       lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
     });
-    revealEmail();
-
+		
 	</script>
 
 	<!-- MODAL CODE BEGINS HERE -->
