@@ -653,7 +653,7 @@ a:focus, button:focus {
                 }
             });
   
-        var emailAddress = encodeURI("email%2Enytek%40gmail%2Ecom");    
+        var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
         alertify.confirm(emailAddress,
               	  function (e) {
                       if (e) {
