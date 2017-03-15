@@ -645,7 +645,8 @@ button:focus {
 	<!--Alertify.js Modal -->
 	<script>
         "use strict";
-    	$('#email-link').hover(function () {
+    	function launchModal() {
+		
   	    alertify.set({
                 labels: {
                     ok: "Follow",
@@ -664,26 +665,7 @@ button:focus {
         	  }
               );
 
-       });
-
-       /* Hack to ensure button doesn't lose the pop-through graphic on defocus */
-       let lastFocusedEl;
-
-        $('body').mouseover(function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            //FUNC FIRES ON CLICK:
-            if (lastFocusedEl) { //If Element has defocused, do this: 
-                lastFocusedEl.focus(); //Return Focus to El
-            }
-            return false;
-        });
-
-        $(".alertify-button-ok").blur(function() { //Detects element defocusing
-          lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
-        }); //Mouse moving resets focus 
-
+       };
 	</script>
 
 	<!-- MODAL CODE BEGINS HERE -->
@@ -1010,8 +992,26 @@ button:focus {
 		</main>
         <script>
             $("#email-link").hover(function () {
-                alert("WOOHOO");
+                launchModal();
             });
+		
+		    /* Hack to ensure button doesn't lose the pop-through graphic on defocus */
+            let lastFocusedEl;
+
+            $('body').mouseover(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                //FUNC FIRES ON CLICK:
+                if (lastFocusedEl) { //If Element has defocused, do this: 
+                    lastFocusedEl.focus(); //Return Focus to El
+                }
+                return false;
+            });
+
+            $(".alertify-button-ok").blur(function() { //Detects element defocusing
+              lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
+            }); //Mouse moving resets focus 	
         </script>
 	</body>
 </html>
