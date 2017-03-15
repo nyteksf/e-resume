@@ -394,7 +394,6 @@ ul {
   padding: 25px;
 }
 
-
 .alertify-resetFocus {
   border: 0;
   clip: rect(0 0 0 0);
@@ -405,7 +404,6 @@ ul {
   position: absolute;
   width: 1px;
 }
-
 
 .alertify-inner {
   text-align: center;
@@ -419,8 +417,6 @@ ul {
   box-sizing: border-box;
   font-size: 100%;
 }
-
-.alertify-buttons {}
 
 .alertify-button,
 .alertify-button:hover,
@@ -454,7 +450,6 @@ ul {
     margin: 0;
   }
 }
-
 
 /**
  * Twitter Bootstrap Look and Feel
@@ -646,20 +641,15 @@ button:focus {
 	<!--Alertify.js Modal -->
 	<script>
         "use strict";
-    	$('document').ready(function () {
-  		      alertify.set({
-                  labels: {
-                      ok: "Follow",
-                      cancel: "Close"
-                  }
-              });
-        	  /*
-        	  alertify.set({
-            	      buttonReverse: true
-        	  });
-        	  */
-
-        	  alertify.confirm("email.nytek@gmail.com",
+    	$('.email-link').mouseover(function () {
+  		    alertify.set({
+                labels: {
+                    ok: "Follow",
+                    cancel: "Close"
+                }
+        });
+  
+        alertify.confirm("email.nytek@gmail.com",
               	  function (e) {
                       if (e) {
                           $('#trigger').click();
