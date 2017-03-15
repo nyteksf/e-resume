@@ -622,12 +622,14 @@ ul {
   color: #468847;
   background: #DFF0D8;
   border: 1px solid #D6E9C6;
+  z-index: 9999999999999999;
 }
 
 .hideMe {
   display: none;
 }
 
+/*FIREFOX*/
 a:focus,
 button:focus { 
     outline: none; 
@@ -642,12 +644,13 @@ button:focus {
 	<script>
         "use strict";
     	$('.email-link').mouseover(function () {
-  		    alertify.set({
+  	    alertify.set({
                 labels: {
                     ok: "Follow",
                     cancel: "Close"
                 }
-        });
+            });
+	alert("ASDADASD");
   
         alertify.confirm("email.nytek@gmail.com",
               	  function (e) {
@@ -657,15 +660,15 @@ button:focus {
                       } else {
                           alertify.error("Thank you. Your consideration is appreciated. <strong>[" + alertify.labels.cancel + "]</strong>");
                       }
-        	      }
+        	  }
               );
 
        });
 
-       /* Hack to ensure button doesn't lose the pop-through graphic */
+       /* Hack to ensure button doesn't lose the pop-through graphic on defocus */
        let lastFocusedEl;
 
-        $('body').mouseover(function(e) {
+        $('body .modal').mouseover(function(e) {
             e.preventDefault();
             e.stopPropagation();
 
@@ -678,7 +681,7 @@ button:focus {
 
         $(".alertify-button-ok").blur(function() { //Detects element defocusing
           lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
-        }); //Mouse moving resets focus*/
+        }); //Mouse moving resets focus 
 
 	</script>
 
