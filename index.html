@@ -1006,12 +1006,17 @@ a:-moz-focusring, button:-moz-focusring {
                 lastFocusedEl = this; //If textarea has lost focus: RECORD IT.
             }); //Mouse moving resets focus
 		
+            
+            $('#alertify-ok').mouseleave(function (e) {
+                e.stopPropagation();
+                alert("aafaf");
+                $('.alertify-button').css("background","url(http://oi65.tinypic.com/2dtrkae.jpg), rgb(6, 84, 160)");
+            });
+            
             $('document').hover(function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 		    
-		$('.alertify-button').css("background","url(http://oi65.tinypic.com/2dtrkae.jpg), rgb(6, 84, 160)");
-
                 if (lastFocusedEl) { //If Element has defocused, do this: 
                     lastFocusedEl.focus(); //Return Focus to El
                 }
