@@ -653,7 +653,8 @@ a:focus, button:focus {
                 }
             });
   
-        alertify.confirm("email.nytek@gmail.com",
+        var emailAddress = encodeURI("email%2Enytek%40gmail%2Ecom");    
+        alertify.confirm(emailAddress,
               	  function (e) {
                       if (e) {
                           $('#trigger').click();
