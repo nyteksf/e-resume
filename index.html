@@ -3,44 +3,14 @@
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	<title>Joe Coviello</title>
-	<script type='text/javascript' src='../js/jquery-3.1.1.min.js'></script>
-	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.min.js'></script>
+	<title>Joe Coviello</title>	
 	<link href='https://cdn.jsdelivr.net/alertify.js/0.3.11/themes/alertify.core.css" rel="stylesheet' />
 	<link href='https://cdn.jsdelivr.net/alertify.js/0.3.11/themes/alertify.default.css' rel='stylesheet' />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
 	<link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css' />
 	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' rel='stylesheet' />
-	<link href='../css/styles.css' rel='stylesheet' type='text/css' />
+	<link href='../css/styles.css' type='text/css' rel='stylesheet' />
 	
-	<!--Alertify.js Modal -->
-	<script>
-        "use strict";
-
-    	function launchModal() {
-		
-  	    alertify.set({
-                labels: {
-                    ok: "Follow",
-                    cancel: "Close"
-                }
-            });
-  
-        var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
-        alertify.confirm(emailAddress,
-              	  function (e) {
-                      if (e) {
-                          $('#trigger').click();
-                          alertify.success("Thank you! Expect to be followed back shortly. <strong>[" + alertify.labels.ok + "]</strong>");
-                      } else {
-                          alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
-                      }
-        	  }
-              );
-
-       };
-	</script>
-
 	<!-- MODAL CODE BEGINS HERE -->
 	<div id="container">
   		<div class="hideMe">
@@ -364,19 +334,9 @@
 				</div>
 			</div>
 		</main>
-        <script>
-	    // Expose Email
-            $("#email-link").mouseover(function (e) {
-                e.stopPropagation();
-		e.preventDefault();
-		launchModal();
-            });
-		
-	    // Hack to ensure button doesn't lose the pop-through graphic on defocus
-	    $(".alertify-button-ok").blur(function () { //Detects element defocusing
-                this.focus();
-            });
-      	
-        </script>
+
+	<script type='text/javascript' src='../js/jquery-3.1.1.min.js'></script>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.min.js'></script>
+	<script type='text/javascript' src='../js/script.js'></script>
 	</body>
 </html>
