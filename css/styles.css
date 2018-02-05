@@ -274,7 +274,6 @@ ul {
 }
 
 a:hover,
-.box,
 .box:hover {
     display: block;
     position: relative;
