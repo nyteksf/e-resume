@@ -10,9 +10,8 @@ function launchModal() {
 
     // When modal triggered, do this:  
     var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
-    alertify.confirm(emailAddress, function(e){
+    alertify.confirm(emailAddress, function(e) {
         if (e) {
-	    e.target.removeEventListener(e.type, arguments.callee);
             alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
         }
     });
@@ -21,12 +20,15 @@ function launchModal() {
 
 // Expose Email:
 $("#email-link").mouseover(function (e) {
+    e.target.removeEventListener(e.type, arguments.callee);
     e.stopPropagation();
     e.preventDefault();
     launchModal();
 });
-		
+
+/*		
 // Hack to ensure button doesn't lose the pop-through graphic on defocus:
 $(".alertify-button-ok").blur(function () { //Detects element defocusing
     this.focus();
 });	
+*/
