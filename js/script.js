@@ -27,7 +27,7 @@ let launchModalOnce = $("#email-link").mouseover(function (e) {
     if (launchModalOnce.true) return true;
     launchModalOnce.true = true;
     launchModal();
-	console.log("!!");
+	console.log("!?!");
     $("span#email-link i.fa.fa-external-link").css("display", "none");
     $("button#alertify-ok").css("display","none");
     return false;
