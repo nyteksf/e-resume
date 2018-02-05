@@ -10,9 +10,9 @@ function launchModal() {
     });
 
     // When modal triggered, do this:  
-    var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
-    alertify.confirm('Contact', emailAddress, function(e) {
-        if (e) {
+    var emailAddress = "'Email', " + decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
+    alertify.confirm(emailAddress, function(e) {
+        if (!e) {
             alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
         }
     });
