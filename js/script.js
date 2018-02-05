@@ -23,17 +23,13 @@ let launchModalOnce = $("#email-link").mouseover(function (e) {
     e.stopPropagation();
     e.preventDefault();
 console.log("bang");	
-    launchModalOnce();
-	console.log("splat");
-});
-
-let launchModalOnce = () => {
     if (launchModalOnce.true) { console.log("true"); return true; }
     launchModalOnce.true = true;
 	console.log("false");
 	launchModal();
     return false;
-}
+	console.log("splat");
+});
 
 /*		
 // Hack to ensure button doesn't lose the pop-through graphic on defocus:
