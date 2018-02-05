@@ -11,7 +11,7 @@ function launchModal() {
 
     // When modal triggered, do this:  
     var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
-    alertify.confirm("Title", emailAddress, function(e) {
+    alertify.confirm(emailAddress, function(e) {
         if (e) {
             alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
         }
