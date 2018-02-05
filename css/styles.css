@@ -268,6 +268,17 @@ ul {
 .references-container .fa {
   font-size: 14px; }
 
+.box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
 /*
 * MODAL CODE BEGIN HERE 
 **/
