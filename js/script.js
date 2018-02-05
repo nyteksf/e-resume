@@ -20,11 +20,16 @@ function launchModal() {
 
 // Expose Email:
 $("#email-link").mouseover(function (e) {
-    e.target.removeEventListener(e.type, arguments.callee);
     e.stopPropagation();
     e.preventDefault();
-    launchModal();
+    launchModalOnce();
 });
+
+let launchModalOnce = () => {
+    if(launchModalOnce.true) return true;
+    launchModalOnce.true = true;
+    return false;
+}
 
 /*		
 // Hack to ensure button doesn't lose the pop-through graphic on defocus:
