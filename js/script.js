@@ -39,6 +39,7 @@ let launchModalOnce = $("#email-link").mouseover(function (e) {
 	
 });
 
+
 /*		
 // Hack to ensure button doesn't lose the pop-through graphic on defocus:
 $(".alertify-button-ok").blur(function () { //Detects element defocusing
