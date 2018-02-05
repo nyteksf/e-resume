@@ -19,14 +19,16 @@ function launchModal() {
 };
 
 // Expose Email:
-$("#email-link").mouseover(function (e) {
+let launchModalOnce = $("#email-link").mouseover(function (e) {
     e.stopPropagation();
     e.preventDefault();
+console.log("bang");	
     launchModalOnce();
+	console.log("splat");
 });
 
 let launchModalOnce = () => {
-    if(launchModalOnce.true) { console.log("true"); return true; }
+    if (launchModalOnce.true) { console.log("true"); return true; }
     launchModalOnce.true = true;
 	console.log("false");
     return false;
