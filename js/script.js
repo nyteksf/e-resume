@@ -22,14 +22,12 @@ function launchModal() {
 let launchModalOnce = $("#email-link").mouseover(function (e) {
     e.stopPropagation();
     e.preventDefault();
-	launchModal();
 console.log("bang");	
     if (launchModalOnce.true) { console.log("true"); return true; }
     launchModalOnce.true = true;
 	console.log("false");
 	launchModal();
     return false;
-	console.log("splat");
 });
 
 /*		
