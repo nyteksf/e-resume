@@ -26,8 +26,9 @@ $("#email-link").mouseover(function (e) {
 });
 
 let launchModalOnce = () => {
-    if(launchModalOnce.true) return true;
+    if(launchModalOnce.true) { console.log("true"); return true; }
     launchModalOnce.true = true;
+	console.log("false");
     return false;
 }
 
