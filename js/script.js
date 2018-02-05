@@ -39,6 +39,19 @@ let launchModalOnce = $("#email-link").mouseover(function (e) {
 	
 });
 
+/* ADD "THIS" and use FIND() TO GET NEAREST BOX 
+$(".skills-container a").mouseover( (e) => {
+    $(".box,.css("","");
+    $(".box, .box:hover").css("","");
+    $("").css("","");	
+});
+
+$(".skills-container a").mouseout( () => {
+    $("").css("","");
+    $("").css("","");
+    $("").css("","");	
+});
+*/
 
 /*		
 // Hack to ensure button doesn't lose the pop-through graphic on defocus:
