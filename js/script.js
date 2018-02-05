@@ -4,7 +4,6 @@ function launchModal() {
 		
     alertify.set({
         labels: {
-            ok: "Follow",
             cancel: "Close"
         }
     });
@@ -13,9 +12,7 @@ function launchModal() {
     var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
     alertify.confirm(emailAddress, function(e){
         if (e) {
-            $('#trigger').click();
-            alertify.success("Thank you! Expect to be followed back shortly. <strong>[" + alertify.labels.ok + "]</strong>");
-        } else {
+	    e.target.removeEventListener(e.type, arguments.callee);
             alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
         }
     });
