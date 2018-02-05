@@ -31,6 +31,7 @@ let launchModalOnce = () => {
     if (launchModalOnce.true) { console.log("true"); return true; }
     launchModalOnce.true = true;
 	console.log("false");
+	launchModal();
     return false;
 }
 
