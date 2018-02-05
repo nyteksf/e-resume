@@ -10,7 +10,7 @@ function launchModal() {
     });
 
     // When modal triggered, do this:  
-    var emailAddress = decodeURIComponent("<i class="fa fa-envelope-o"></i>", "email%2Enytek%40gmail%2Ecom");   
+    var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
     alertify.confirm(emailAddress, function(e) {
         if (e) {
             alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
