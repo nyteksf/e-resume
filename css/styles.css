@@ -273,13 +273,6 @@ ul {
     width: 100%;
 }
 
-a:hover,
-.box:hover {
-    display: block;
-    position: relative;
-    z-index: 100;
-}
-
 /*
 * MODAL CODE BEGIN HERE 
 **/
