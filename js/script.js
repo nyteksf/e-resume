@@ -10,7 +10,7 @@ function launchModal() {
     });
 
     // When modal triggered, do this:  
-    var emailAddress = "'Email', " + decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
+    var emailAddress = decodeURIComponent("email%2Enytek%40gmail%2Ecom");   
     alertify.confirm(emailAddress, function(e) {
         if (!e) {
             alertify.success("Thank you. Your consideration is appreciated. <strong>[close]</strong>");
@@ -20,14 +20,19 @@ function launchModal() {
 };
 
 // Expose Email:
+let modalLaunchCount = 0;
 let launchModalOnce = $("#email-link").mouseover(function (e) {
     e.stopPropagation();
     e.preventDefault();
-	
+		
     if (launchModalOnce.true) return true;
-    launchModalOnce.true = true;
+    if (modalLaunchCount >= 2) {
+	    launchModalOnce.true = true;
+	    return true;
+    }
+    modalLaunchCount++;
     launchModal();
-	console.log("!?!");
+	console.log("??? :)");
     $("span#email-link i.fa.fa-external-link").css("display", "none");
     $("button#alertify-ok").css("display","none");
     return false;
