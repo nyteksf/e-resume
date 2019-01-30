@@ -631,3 +631,7 @@ a:-moz-focusring, button:-moz-focusring {
 /*
 * MODAL CODE END HERE 
 **/
+
+.left-column .container {
+    margin-bottom: 5px;
+}
