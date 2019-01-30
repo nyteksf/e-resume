@@ -634,5 +634,5 @@ a:-moz-focusring, button:-moz-focusring {
 
 /* Space out left side column */
 .left-column .container, {
-    padding-bottom: 11px;
+    padding-bottom: 11px !important;
 }
