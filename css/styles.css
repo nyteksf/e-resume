@@ -632,6 +632,7 @@ a:-moz-focusring, button:-moz-focusring {
 * MODAL CODE END HERE 
 **/
 
+/* Space out left side column */
 .left-column .container {
     margin-bottom: 5px;
 }
