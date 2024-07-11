@@ -1,2 +1,2 @@
-# http://nyteksf.github.io
+# http://nyteksf.github.io/e-resume/
 **My Online Resume**
