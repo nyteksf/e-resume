@@ -633,6 +633,11 @@ a:-moz-focusring, button:-moz-focusring {
 **/
 
 /* Space out left side column */
-.left-column .container, {
+.left-column .container {
     padding-bottom: 11px !important;
+}
+
+.summary {
+  max-width: 360px;
+  line-height: 1.5;
 }
